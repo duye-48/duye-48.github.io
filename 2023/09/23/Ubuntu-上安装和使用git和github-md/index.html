@@ -18,13 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="article">
+        <meta name="description" content="Ubuntu 上安装和使用git和github1、在Linux上安装Git 下载并安装Git： 1sudo apt-get install git  2、配置GitHub 请使用下面的两条命令，并确保用你自己的GitHub 用户名替换 user_name，用你创建 GitHub 账户的电子邮件替换 email_id。 12git config --global user.name &quot;us">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 上安装和使用git和github.md">
 <meta property="og:url" content="http://example.com/2023/09/23/Ubuntu-%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8git%E5%92%8Cgithub-md/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Ubuntu 上安装和使用git和github1、在Linux上安装Git 下载并安装Git： 1sudo apt-get install git  2、配置GitHub 请使用下面的两条命令，并确保用你自己的GitHub 用户名替换 user_name，用你创建 GitHub 账户的电子邮件替换 email_id。 12git config --global user.name &quot;us">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-23T12:52:03.000Z">
-<meta property="article:modified_time" content="2023-09-23T12:52:03.646Z">
+<meta property="article:modified_time" content="2023-09-23T13:39:54.047Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -372,8 +374,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-23 20:52:03</span>
-            <span class="mobile">2023-09-23 20:52:03</span>
+            <span class="desktop">2023-09-23 21:39:54</span>
+            <span class="mobile">2023-09-23 21:39:54</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -382,6 +384,10 @@
     
 
     
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>468 字</span>
+        </span>
     
     
         <span class="article-min2read article-meta-item">
@@ -404,7 +410,44 @@
 
 
         <div class="article-content markdown-body">
-            
+            <h1 id="Ubuntu-上安装和使用git和github"><a href="#Ubuntu-上安装和使用git和github" class="headerlink" title="Ubuntu 上安装和使用git和github"></a>Ubuntu 上安装和使用git和github</h1><p><strong>1、在Linux上安装Git</strong></p>
+<p>下载并安装Git：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>2、配置GitHub</strong></p>
+<p>请使用下面的两条命令，并确保用你自己的GitHub 用户名替换 user_name，用你创建 GitHub 账户的电子邮件替换 email_id。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="variable language_">global</span> user.<span class="property">name</span> <span class="string">&quot;user_name&quot;</span></span><br><span class="line">git config --<span class="variable language_">global</span> user.<span class="property">email</span> <span class="string">&quot;email_id&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>3、创建本地仓库</strong></p>
+<p>在你的系统上创建一个目录。它将会被作为本地仓库使用，稍后它会被推送到 GitHub 的远程仓库。请使用如下命令：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init Mytest</span><br></pre></td></tr></table></figure></div>
+
+<p>如果目录被成功创建，你会看到如下信息：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Initialized</span> empty <span class="title class_">Git</span> repository <span class="keyword">in</span> /home/akshay/<span class="title class_">Mytest</span>/.<span class="property">git</span>/</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>4、新建一个 README 文件来描述仓库</strong></p>
+<p>现在创建一个 README 文件并输入一些文本，如 “this is git setup on linux”。README 文件一般用于描述这个仓库用来放置什么内容或这个项目是关于什么的。例如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit README</span><br></pre></td></tr></table></figure></div>
+
+<p>你可以使用任何文本编辑器。我喜欢使用 gedit。README 文件的内容可以为：</p>
+<p><strong>This is a git repo</strong></p>
+<p><strong>5、将仓库里的文件加入一个索引</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add README</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>6、将所作的改动加入索引</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;some_message&quot;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>7、在 GitHub 上创建一个仓库</strong></p>
+<p>在 GitHub 上创建一个仓库。请注意仓库的名字必须和你本地创建的仓库的名字严格一致。在这个例子里是 “Mytest”。</p>
+<p>请注意：请确保在运行下列命令前替换了路径中的 “user_name” 和 “Mytest” 为你的 GitHub 用户名和目录名！</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/user_name/Mytest.git&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>8、将本地仓库里的文件推送到 GitHub 仓库</strong></p>
+<p>最后一步是用下列的命令将本地仓库的内容推送到远程仓库（GitHub）：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></div>
+
+<p>当提示登录名和密码时键入登录名和密码 </p>
+
         </div>
 
         
@@ -418,7 +461,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-09-23 20:52:03
+                    :</strong> 2023-09-23 21:39:54
             </li>
         
         <li>
@@ -447,24 +490,24 @@
     <div class="recommended-article-header">
      <i aria-hidden="true"></i><span>推荐文章</span>
     </div>
-    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/09/23/ubuntu安装Note-js-md/" title="ubuntu安装Note.js.md" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="ubuntu安装Note.js.md" class="!max-w-none">
-  <span class="title">ubuntu安装Note.js.md</span>
-</a><a class="recommended-article-item" href="/2023/09/23/hello-world/" title="Hello World" rel="bookmark">
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/09/23/hello-world/" title="Hello World" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="Hello World" class="!max-w-none">
   <span class="title">Hello World</span>
+</a><a class="recommended-article-item" href="/2023/09/23/ubuntu安装Note-js-md/" title="ubuntu安装Note.js.md" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="ubuntu安装Note.js.md" class="!max-w-none">
+  <span class="title">ubuntu安装Note.js.md</span>
 </a></div>
    </div>
    <div class="recommended-mobile">
    <div class="recommended-article-header">
      <i aria-hidden="true"></i><span>推荐文章</span>
    </div>
-   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/09/23/ubuntu安装Note-js-md/" title="ubuntu安装Note.js.md" rel="bookmark">
-  <img src="/images/wallhaven-wqery6-light.webp" alt="ubuntu安装Note.js.md" class="!max-w-none">
-  <span class="title">ubuntu安装Note.js.md</span>
-</a><a class="recommended-article-item" href="/2023/09/23/hello-world/" title="Hello World" rel="bookmark">
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2023/09/23/hello-world/" title="Hello World" rel="bookmark">
   <img src="/images/wallhaven-wqery6-light.webp" alt="Hello World" class="!max-w-none">
   <span class="title">Hello World</span>
+</a><a class="recommended-article-item" href="/2023/09/23/ubuntu安装Note-js-md/" title="ubuntu安装Note.js.md" rel="bookmark">
+  <img src="/images/wallhaven-wqery6-light.webp" alt="ubuntu安装Note.js.md" class="!max-w-none">
+  <span class="title">ubuntu安装Note.js.md</span>
 </a></div>
    </div>
   </div>
@@ -560,7 +603,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">Ubuntu 上安装和使用git和github.md</div>
-        
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8git%E5%92%8Cgithub"><span class="nav-text">Ubuntu 上安装和使用git和github</span></a></li></ol>
 
     </div>
 </div>
