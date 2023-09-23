@@ -23,4 +23,61 @@
     <url>/2023/09/23/test-my-site/</url>
     <content><![CDATA[]]></content>
   </entry>
+  <entry>
+    <title></title>
+    <url>/2023/09/23/Ubuntu%20%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8git%E5%92%8Cgithub/</url>
+    <content><![CDATA[<p>Ubuntu 上安装和使用git和github</p>
+<p><strong>1、在Linux上安装Git</strong></p>
+<p>下载并安装Git：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install git</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>2、配置GitHub</strong></p>
+<p>请使用下面的两条命令，并确保用你自己的GitHub 用户名替换 user_name，用你创建 GitHub 账户的电子邮件替换 email_id。</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line">git config --<span class="variable language_">global</span> user.<span class="property">name</span> <span class="string">&quot;user_name&quot;</span></span><br><span class="line">git config --<span class="variable language_">global</span> user.<span class="property">email</span> <span class="string">&quot;email_id&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>3、创建本地仓库</strong></p>
+<p>在你的系统上创建一个目录。它将会被作为本地仓库使用，稍后它会被推送到 GitHub 的远程仓库。请使用如下命令：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init Mytest</span><br></pre></td></tr></table></figure></div>
+
+<p>如果目录被成功创建，你会看到如下信息：</p>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Initialized</span> empty <span class="title class_">Git</span> repository <span class="keyword">in</span> /home/akshay/<span class="title class_">Mytest</span>/.<span class="property">git</span>/</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>4、新建一个 README 文件来描述仓库</strong></p>
+<p>现在创建一个 README 文件并输入一些文本，如 “this is git setup on linux”。README 文件一般用于描述这个仓库用来放置什么内容或这个项目是关于什么的。例如：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">gedit README</span><br></pre></td></tr></table></figure></div>
+
+<p>你可以使用任何文本编辑器。我喜欢使用 gedit。README 文件的内容可以为：</p>
+<p><strong>This is a git repo</strong></p>
+<p><strong>5、将仓库里的文件加入一个索引</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git add README</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>6、将所作的改动加入索引</strong></p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;some_message&quot;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>7、在 GitHub 上创建一个仓库</strong></p>
+<p>在 GitHub 上创建一个仓库。请注意仓库的名字必须和你本地创建的仓库的名字严格一致。在这个例子里是 “Mytest”。</p>
+<p>请注意：请确保在运行下列命令前替换了路径中的 “user_name” 和 “Mytest” 为你的 GitHub 用户名和目录名！</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin https://github.com/user_name/Mytest.git&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>8、将本地仓库里的文件推送到 GitHub 仓库</strong></p>
+<p>最后一步是用下列的命令将本地仓库的内容推送到远程仓库（GitHub）：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></div>
+
+<p>当提示登录名和密码时键入登录名和密码 </p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/09/23/ubuntu%E5%AE%89%E8%A3%85Note.js/</url>
+    <content><![CDATA[<h1 id="ubuntu安装Note-js"><a href="#ubuntu安装Note-js" class="headerlink" title="ubuntu安装Note.js"></a>ubuntu安装Note.js</h1><h4 id="一-从-NodeSource-中安装-Node-js-和-npm"><a href="#一-从-NodeSource-中安装-Node-js-和-npm" class="headerlink" title="一.从 NodeSource 中安装 Node.js 和 npm"></a>一.从 NodeSource 中安装 Node.js 和 npm</h4><p>nodeSource是一个公司，使用nodeSource软件源可以自己选择版本</p>
+<p>1.以 sudo 用户身份运行下面的命令，这里下载的是note.js_12,下载并执行 NodeSource 安装脚本：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</span><br></pre></td></tr></table></figure></div>
+
+<p>这个脚本将会添加 NodeSource 的签名 key 到你的系统，创建一个 apt 源文件，安装必备的软件包，并且刷新 apt 缓存。</p>
+<p>2.NodeSource源启用成功后，安装Node.js和npm:</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure></div>
+
+<p>nodejs 软件包同时包含<code>node</code>和<code>npm</code>二进制包。<br>3）验证 Node.js 和 npm 是否正确安装。打印它们的版本号：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">node --version</span><br></pre></td></tr></table></figure></div>]]></content>
+  </entry>
 </search>
